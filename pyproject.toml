@@ -1,0 +1,42 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "screen-shotter"
+dynamic = ["version"]
+description = ''
+readme = "README.md"
+requires-python = ">=3.8"
+license = "MIT"
+keywords = []
+authors = [
+  { name = "Kenneth Yang", email = "microbob@is88.com" },
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Programming Language :: Python",
+  "Programming Language :: Python :: 3.8",
+  "Programming Language :: Python :: 3.9",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: Implementation :: CPython",
+  "Programming Language :: Python :: Implementation :: PyPy",
+]
+dependencies = [
+  "pyautogui",
+  "pillow"
+]
+
+[project.urls]
+Documentation = "https://github.com/Kenneth Yang/screen-shotter#readme"
+Issues = "https://github.com/Kenneth Yang/screen-shotter/issues"
+Source = "https://github.com/Kenneth Yang/screen-shotter"
+
+[tool.hatch.version]
+path = "src/screen_shotter/__about__.py"
+
+[tool.hatch.envs.default]
+installer = "uv"
+python = "3.13"
